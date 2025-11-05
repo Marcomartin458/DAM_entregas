@@ -35,7 +35,7 @@ public class MyScanner {
             if (!valido) {
                 System.out.println("ERROR: solo se permiten letras (sin números ni símbolos). Inténtalo de nuevo.");
             }
-        }  while (!valido);
+        } while (!valido);
         return input;
     }
 
@@ -49,7 +49,7 @@ public class MyScanner {
             if (!valido) {
                 System.out.println("ERROR: solo se permite introducir una letra. Inténtalo de nuevo.");
             }
-        }while (!valido);
+        } while (!valido);
 
         return input.charAt(0);
     }
@@ -64,5 +64,22 @@ public class MyScanner {
             }
         } while (texto.isEmpty());
         return texto;
+    }
+
+    public double pedirPrecio(String mns) {
+        double n = -1;
+        boolean flag = true;
+        while (flag) {
+            try {
+                System.out.println(mns);
+                n = sc.nextDouble();
+                sc.nextLine();
+                flag = false;
+            } catch (InputMismatchException e) {
+                System.out.println("Eso no es número!");
+                sc.nextLine();
+            }
+        }
+        return n;
     }
 }
