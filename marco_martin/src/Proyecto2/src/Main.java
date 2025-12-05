@@ -1,3 +1,5 @@
+package Proyecto2.src;
+
 import clases.Taller;
 import recursos.MyScanner;
 
